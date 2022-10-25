@@ -1,0 +1,228 @@
+@media (min-width: 540px) {
+    body, html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 760px) {
+    :root {
+        --icon-size: 1.5rem;
+    }
+
+    body, html {
+        font-size: 13px;
+    }
+
+    nav {
+        .open-nav {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+        }
+    }
+
+    header {
+        .cidade {
+            .descricao {
+                width: 400px;
+
+                div {
+                    width: 208px;
+                }
+            }
+
+            .destino {
+                h1 {
+                    font-size: 7rem;
+                } 
+            }
+        }
+    }
+
+    main {
+        #experiencias {
+            ul {
+
+                li {
+                    width: 31%;
+                    height: 160px;
+                }
+            }
+        }
+    }
+
+    main {
+        #pacotes {
+            
+            .conteiner-pacotes {
+                width: 65%;
+                max-width: 430px;
+
+                .card {
+                    .pacote {
+                        height: 180px;
+                    }
+                }
+            }
+
+            h2 {
+                position: absolute;
+                top: 170px;
+                right: 0;
+                text-align: right;
+                width: 300px;
+            }
+
+            & > button {
+                position: absolute;
+                right: 0;
+                bottom: 200px;
+            }
+        }
+    }
+
+    main {
+        #newsletter {
+            form {
+                flex-direction: row;
+                justify-content: center;
+                
+                .input-container {
+                    max-width: 500px;
+
+                    height: max-content;
+                }
+                button {
+                    padding: .9rem 1rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+} 
+
+@media (min-width: 960px) {
+
+    body, html {
+        font-size: 14px;
+    }
+
+    header {
+        .cidade {
+            .descricao {
+                width: 400px;
+
+                div {
+                    width: 208px;
+                }
+                
+            }
+        }
+    }
+
+    main {
+        #passagem {
+            form {
+                & > div {
+                    width: 24%;
+                }
+                & > div:nth-child(3), & > div:nth-child(4) {
+                    width: 24%;
+                }
+                
+            }
+        }
+    }
+
+    main {
+        #experiencias {
+            ul {
+
+                li {
+                    width: 23%;
+                    height: 220px;
+                    
+                    &:hover {
+                        transform: scale(1.03);
+                    } 
+                }
+            }
+        }
+    }
+
+    main {
+        #pacotes {
+
+            &::after {
+
+                background-position: center;
+
+            }
+            
+            .conteiner-pacotes {
+                width: 60%;
+                max-width: 450px;
+                margin-left: 80px;
+
+                .card {
+                    .pacote {
+                        height: 180px;
+                    }
+                }
+            }
+
+            h2 {
+                margin-right: 80px;
+                text-align: right;
+                width: 350px;
+                position: absolute;
+                right: 0;
+            }
+
+            & > button {
+                margin-right: 80px;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    footer {  
+        .midias-sociais {
+            position: absolute; /* absolute */
+            margin-top: 0;
+    
+        }
+    
+        .rodape {
+            flex-direction: row;
+
+            .esquerda {
+                text-align: left;
+            }
+    
+            .direita {
+                text-align: right;
+            }
+        }
+            
+        .copy {
+            margin-top: 0; /* 0 */
+        }
+    }
+    
+}
+
+@media (min-width: 1440px) {
+    body, html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body, html {
+        font-size: 18px;
+    }
+}

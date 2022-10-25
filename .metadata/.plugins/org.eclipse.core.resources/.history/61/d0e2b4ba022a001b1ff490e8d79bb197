@@ -1,0 +1,30 @@
+package FoodMachine;
+
+public class MostrarProduto {
+	
+	public static void Lanches() {
+		Produtos doritos = Produtos.DORITOS;
+		Produtos barradecereal = Produtos.BARRADECEREAL;
+		Produtos pringles = Produtos.PRINGLES;
+		Produtos jujuba = Produtos.JUJUBA;
+		
+		System.out.println("Lanches  "+"       Valor  "+"       Codigo de resgate" );
+		System.out.println(doritos.toString() + "         "+ doritos.getPreco()+ "             "+ doritos.getCodigo());
+		System.out.println(barradecereal.toString() + "   "+ barradecereal.getPreco()+ "            "+ barradecereal.getCodigo());
+		System.out.println(pringles.toString() + "        "+ pringles.getPreco()+ "             "+ pringles.getCodigo());
+		System.out.println(jujuba.toString() + "          "+ jujuba.getPreco()+ "           "+ jujuba.getCodigo());
+	}
+	
+	public static void Bebidas() {
+		Produtos agua = Produtos.AGUA;
+		Produtos coca = Produtos.COCA;
+		Produtos pepsi = Produtos.PEPSI;
+		Produtos sprite = Produtos.SPRITE;
+		
+		System.out.println("Bebida   "+"       Valor  "+"       Codigo de resgate" );
+		System.out.println(agua.toString() + "            "+ agua.getPreco()+ "             "+ agua.getCodigo());
+		System.out.println(coca.toString() + "            "+ coca.getPreco()+ "             "+ coca.getCodigo());
+		System.out.println(pepsi.toString() + "           "+ pepsi.getPreco()+ "             "+ pepsi.getCodigo());
+		System.out.println(sprite.toString() + "          "+ sprite.getPreco()+ "             "+ sprite.getCodigo());
+	}
+}

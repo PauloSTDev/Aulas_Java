@@ -1,0 +1,10 @@
+package br.edu.imed;
+
+public class ChequeEspecial {
+	String agencia;
+	String banco;
+	String titular;
+	String cpf;
+	Double saldo;
+	Double cheque;
+}

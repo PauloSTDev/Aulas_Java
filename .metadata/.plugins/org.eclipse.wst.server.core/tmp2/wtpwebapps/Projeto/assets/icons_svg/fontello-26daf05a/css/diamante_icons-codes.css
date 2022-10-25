@@ -1,0 +1,14 @@
+
+.icon-coracao:before { content: '\e800'; } /* '' */
+.icon-chevron_left:before { content: '\e801'; } /* '' */
+.icon-dinheiro_nota:before { content: '\e802'; } /* '' */
+.icon-carteira:before { content: '\e803'; } /* '' */
+.icon-cartao-de-credito:before { content: '\e804'; } /* '' */
+.icon-carrinho:before { content: '\e805'; } /* '' */
+.icon-facebook:before { content: '\e806'; } /* '' */
+.icon-instagram:before { content: '\e807'; } /* '' */
+.icon-lista:before { content: '\e808'; } /* '' */
+.icon-mao_dinheiro:before { content: '\e809'; } /* '' */
+.icon-prancheta:before { content: '\e80a'; } /* '' */
+.icon-alerta:before { content: '\e80b'; } /* '' */
+.icon-carregando_caixas:before { content: '\e80c'; } /* '' */

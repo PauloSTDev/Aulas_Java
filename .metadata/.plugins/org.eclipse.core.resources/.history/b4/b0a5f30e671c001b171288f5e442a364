@@ -1,0 +1,126 @@
+package br.edu.imed.MachineFood;
+
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import br.edu.imed.Exception.EstoqueZeradoException;
+import br.edu.imed.Exception.TrocoInsuficienteException;
+
+public class VendingMachineTest {
+	
+	private static VendingMachine vm;
+	
+	@Before
+	public void setUp() {
+		
+		vm = new VendingMachineImpl();
+	}
+
+	@After
+	public static void tearDown() {
+		
+		vm = null;
+	}
+		
+	@Test
+	public void comprarItemComPrecoExato() {
+		
+		//Seleciona o preço do item na máquina
+		long preco = vm.selecionarItemEObterPreco(Item.SODA);
+		
+		//O preço é o mesmo da lista enumerada
+		assertEquals(preco, Item.SODA.getPreco());
+		
+		vm.inserirMoeda(Moeda.QUARTO);
+		vm.inserirMoeda(Moeda.DEZ);
+		vm.inserirMoeda(Moeda.DEZ);
+		Map<Item, List<Moeda>> troco = vm.obterItemETroco();
+		Item item = (Item)troco.keySet().toArray()[0];
+		List<Moeda> moedas = (List<Moeda>)troco.get(item);
+		
+		assertEquals(Item.SODA, item);
+		assertTrue(moedas.isEmpty());	
+	}
+	
+	public void comprarItemComPrecoMaior() {
+		
+		long preco = vm.selecionarItemEObterPreco(Item.SODA);
+		
+		//O preço é o mesmo da lista enumerada
+		assertEquals(preco, Item.SODA.getPreco());
+		
+		vm.inserirMoeda(Moeda.QUARTO);
+		vm.inserirMoeda(Moeda.QUARTO);
+		vm.inserirMoeda(Moeda.QUARTO);
+		Map<Item, List<Moeda>> troco = vm.obterItemETroco();
+		Item item = (Item)troco.keySet().toArray()[0];
+		List<Moeda> moedas = (List<Moeda>) troco.get(item);
+		
+		assertEquals(Item.SODA, item);
+		assertTrue(!moedas.isEmpty());
+		long esperado = 75 - item.SODA.getPreco();
+		long obtido = getValorTotal(moedas);
+		assertEquals(esperado, obtido);
+	
+	}
+	
+	@Test
+	public void testarDevolucao() {
+		
+		long preco = vm.selecionarItemEObterPreco(Item.PEPSI);
+		assertEquals(preco, Item.PEPSI.getPreco());
+		vm.inserirMoeda(Moeda.QUARTO);
+		vm.inserirMoeda(Moeda.DEZ);
+		vm.inserirMoeda(Moeda.CINCO);
+		vm.inserirMoeda(Moeda.CENTAVO);
+		assertEquals(41, getValorTotal(vm.resgatar()));
+	}
+	
+	
+	@Test(expected = EstoqueZeradoException.class)
+	public void testarSemEstoque() {
+		
+		for(int i = 0; i < 6; i++) {
+			vm.selecionarItemEObterPreco(Item.COCA);
+			vm.inserirMoeda(Moeda.QUARTO);
+			vm.obterItemETroco();
+		}
+	}
+	@Test(expected = TrocoInsuficienteException.class)
+	public void testarTrocoInsuficiente() {
+		for (int i = 0; i < 5; i++) {
+			//Traz o item coca
+			vm.selecionarItemEObterPreco(Item.COCA);
+			//traz a moeda de 25
+			vm.inserirMoeda(Moeda.QUARTO);
+			//inseri a moeada na maquina
+			vm.inserirMoeda(Moeda.QUARTO);
+			//Calcula troco
+			vm.obterItemETroco();
+			//traz outro item, a pepsi e repete o processo
+			vm.selecionarItemEObterPreco(Item.PEPSI);
+			vm.inserirMoeda(Moeda.QUARTO);
+			vm.inserirMoeda(Moeda.QUARTO);
+			vm.obterItemETroco();
+		}
+	}
+	private long getValorTotal (List<Moeda> moedas) {
+		long total = 0;
+		
+		for (Moeda m : moedas) {
+			total += m.getDescricao();
+		}
+		return total;
+	}
+	
+}

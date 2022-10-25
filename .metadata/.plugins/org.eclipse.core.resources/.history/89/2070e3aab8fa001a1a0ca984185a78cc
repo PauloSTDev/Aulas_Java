@@ -1,0 +1,22 @@
+package br.edu.imed;
+
+public class DadosChequeEspecial {
+	String agencia;
+	String banco;
+	String titular;
+	String cpf;
+	Double saldo;
+	Double cheque;
+	public void MostrarSaldo() {
+		System.out.println("Saldo: "+saldo);
+	}
+	public void CalcularChequeEspecial(Double saldo) {
+		saldo = saldo/2;
+		System.out.println("Cheque Especial: "+saldo);
+	}
+	public void sacar(Double valor) {
+		saldo = saldo - valor;
+		System.out.println("Sua retirada de "+valor+" foi realizada.");
+		
+	}
+}

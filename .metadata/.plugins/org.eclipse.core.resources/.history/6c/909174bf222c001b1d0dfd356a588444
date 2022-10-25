@@ -1,0 +1,20 @@
+package FoodMachine;
+
+import java.util.Scanner;
+
+public class Pedido {
+	
+	public static void Lanche() {
+		System.out.println("Faça o seu pedido de Lanche: ");		
+		Scanner input = new Scanner(System.in);
+		String pedido = input.nextString();
+		System.out.println();
+		
+	}
+	public static void Bebida() {
+		System.out.println("Qual será a sua bebida? ");		
+		Scanner pedido = new Scanner(System.in);
+		System.out.println(pedido.nextLine());
+		
+	}
+}

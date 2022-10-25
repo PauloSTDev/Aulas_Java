@@ -1,0 +1,22 @@
+package FoodMachine;
+
+import java.util.Scanner;
+
+public class Pedido {
+	
+	public static void Lanche() {
+		System.out.println("Faça o seu pedido de Lanche: ");		
+		Scanner input = new Scanner(System.in);
+		String pedido = input.nextLine();
+		if(pedido == "1B") {
+			System.out.println("Seu pedido  foi o Doritos");
+		}
+		
+	}
+	public static void Bebida() {
+		System.out.println("Qual será a sua bebida? ");		
+		Scanner input = new Scanner(System.in);
+		String pedido = input.nextLine();
+		
+	}
+}

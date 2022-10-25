@@ -1,0 +1,245 @@
+<!----
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media-queries/media-queries.css">
+    <title>Seta Turismo</title>
+</head>
+<body>
+    <nav>
+
+        <div class="container flex">
+
+            <a href="#seta"><img src="./assets/icons/logo.svg" alt="logo da Seta Turismo"></a>
+            
+            <a href="#" class="open-nav" onclick="openNav()">&#9776;</a>
+            <div id="mySidenav" class="sidenav">
+                <a href="#" class="close-nav" onclick="closeNav()">&times;</a>
+                <a href="#passagem">Passagens</a>
+                <a href="#experiencias">Destinos</a>
+                <a href="#pacotes">Pacotes</a>
+            </div>
+            
+
+            <div class="menu">
+                <a href="#passagem">Passagens</a>
+                <a href="#experiencias">Destinos</a>
+                <a href="#pacotes">Carrinho</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <header id="seta">
+
+        <div class="cidade container"> 
+
+            <div class="destino">
+                <h1>Cancún</h1>
+                <h3>Paraíso tropical</h3>
+            </div>
+            
+            <div class="descricao">
+                <p>Cancún vai muito além das praias. É um destino completo, e isso a torna impressionante.</p>
+                <div>
+                    <p>À partir de</p>
+                    <p class="preco">R$ 2.900,00</p>
+                    <p>Em até 12x</p>
+                </div>
+              </div>
+
+            <button class="btn btn-roxo" type="button">Ver detalhes</button>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="passagem">
+            <h2>Buscar passagem</h2>
+            <form action="#" method="get" class="container">
+                
+                <div class="full">
+                    <label for="origem">Origem</label><br>
+                    <div class="input-container">
+                        <div class="icon">
+                            <i data-feather="flag"></i>
+                        </div>
+                        
+                        <input 
+                        type="text" 
+                        id="origem" 
+                        placeholder="De onde?"
+                        /> 
+                    </div>
+                </div>
+
+                <div class="full">
+                    <label for="destino">Destino</label><br>
+                    <div class="input-container">
+                        <div class="icon">
+                            <i data-feather="map-pin"></i>
+                        </div>
+                        
+                        <input 
+                        type="text" 
+                        id="destino" 
+                        placeholder="Para onde?"
+                        />
+                    </div>
+                </div>
+
+                <div class="data-partida">
+                    <label for="partida">Partida</label>
+                    <div class="input-container">
+                        <div class="icon">
+                            <i data-feather="calendar"></i>
+                        </div>
+                        
+                        <input 
+                        type="date" 
+                        name="partida" 
+                        id="partida" 
+                        class="partida"
+                        />
+                    </div>
+                </div>
+                
+                <div class="data-retorno">
+                    <label for="retorno">Retorno</label>
+                    <div class="input-container">
+                        <div class="icon">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                        
+                        <input 
+                        type="date" 
+                        name="retorno" 
+                        id="retorno" 
+                        class="retorno"
+                        />
+                    </div>
+                </div>
+                
+                <button class="btn btn-amarelo btn-busca" type="button"><i data-feather="search"></i>Buscar</button>
+            </form>
+        </section>
+
+        <section id="experiencias" class="container">
+            
+            <h2>Experiências</h2>
+            <h3 class="subtitulo">Encontre o melhor destino por meio das experiências que ele oferece.</h3>
+            
+            <ul> <!-- Onde estão os <span> trocar para <a> quando houver os links -->
+                <li class="aventura foto"><span>Aventura</span></li>
+                <li class="romanticos foto"><span>Românticos</span></li>
+                <li class="resorts foto"><span>Resorts</span></li>
+                <li class="paisagens foto"><span>Paisagens</span></li>
+                <li class="diversao foto"><span>Diversão</span></li>
+                <li class="familia foto"><span>Família</span></li>
+                <li class="mergulho foto"><span>Mergulho</span></li>
+                <li class="cruzeiros foto"><span>Cruzeiros</span></li>
+            </ul>
+            
+        </section>
+
+        <section id="pacotes" class="container">
+            
+            <h2>somos a maior empresa brasileira na área de turismo internacional.<br><br>viaje conosco!</h2>
+            
+            <div class="conteiner-pacotes">
+                <div class="card">
+                    <div class="pacote">
+                        <!-- background-image -->
+                    </div>
+
+                    <div class="info">
+                        <h3>londres</h3>
+                        <p>Passagem aérea</p>
+                        <p>Hotel incluso<span class="rating"></span></p>
+                        
+                        <p class="preco-card">à partir de<br><span>R$ 4.500,00</span></p>
+                    
+                    
+                        <button class="btn btn-amarelo" type="button">Comprar</button>
+                    </div>
+                </div>
+
+                <button class="nav-btn previous" type="button" title="anterior"><svg data-feather="chevron-left"></svg></button>
+                <button class="nav-btn next" type="button" title="próximo"><svg data-feather="chevron-right"></svg></button>
+            </div>
+
+            <button class="btn btn-amarelo" type="button">Ver pacotes</button>
+            
+        </section>
+
+        <section id="newsletter" class="container">
+            <h2>Quer receber as nossas ofertas?</h2>
+            <h3 class="subtitulo">Nos envie o seu email e tenha acesso às melhores ofertas</h3>
+            
+            <form action="#" method="post">
+
+                <div class="input-container">
+                    <div class="icon">
+                        <i data-feather="mail"></i>
+                    </div>
+                    
+                    <input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Deixe o seu email..."
+                    />
+                </div>
+
+                <button type="button" class="btn btn-roxo">Assine a newsletter</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="midias-sociais centro">
+            <a href="#seta"><img src="./assets/icons/logo.svg" alt="Logo da Seta Turismo"></a>
+        
+            <ul>
+                <li><a href="#footer"><svg data-feather="instagram"></svg></a></li>
+                <li><a href="#footer"><svg data-feather="facebook"></svg></a></li>
+                <li><a href="#footer"><svg data-feather="twitter"></svg></a></li>
+            </ul>
+        </div>
+        <div class="container rodape">
+            <div class="esquerda">
+                <a href="#footer">Sobre nós</a>
+                <a href="#footer">Termos de Uso</a>
+                <a href="#footer">Políticas de privacidade</a>
+                <a href="#footer">Formas de pagamento</a>
+            </div>
+            <div class="direita">
+                <a href="#footer">Relações com investidores</a>
+                <a href="#footer">Condições de contratação</a>
+                <a href="#footer">Sala de imprensa</a>
+                <a href="#footer">Trabalhe conosco</a>
+            </div>
+        </div>
+        
+        <div class="copy">
+            &copy; 2019 - Todos os direitos reservados
+        </div> 
+    </footer>
+
+    <script src="./libs/feather.min.js"></script>
+    <script>feather.replace();</script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+<!---->

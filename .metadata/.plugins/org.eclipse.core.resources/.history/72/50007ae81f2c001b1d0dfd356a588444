@@ -1,0 +1,10 @@
+package FoodMachine;
+
+public class Main {
+	public static void main (String[] args) {
+		MostrarProduto.Lanches();
+		System.out.println("  ");
+		MostrarProduto.Bebidas();
+		Lanche
+	}
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../img/bg_homefinalizacao.png');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+button{
+    font-family: 'Open Sans',sans-serif;
+    -webkit-transition: 0.2s ease-in;
+     -moz-transition: 0.2s ease-in; 
+     -o-transition: 0.2s ease-in;
+     transition: 0.2s ease-in;
+}
+
+@import 'variaveis.scss';
+@import 'header.scss';

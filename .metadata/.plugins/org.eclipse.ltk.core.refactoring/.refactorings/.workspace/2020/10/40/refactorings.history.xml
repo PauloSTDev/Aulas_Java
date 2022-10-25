@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;swing-jdbc-crud&apos;" deleteContents="false" description="Delete resource &apos;swing-jdbc-crud&apos;" element1="/swing-jdbc-crud" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1601514603726"/>
+</session>

@@ -1,0 +1,64 @@
+package atividades;
+
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class ManterProduto {
+	
+	public void inserirProduto(Connection con, Produto produto) {
+		
+		String sqlInsert = "INSERT INTO produto(nome, preco) VALUES(?, ?) ";
+		
+		try {
+			PreparedStatement pstmt = con.prepareStatement(sqlInsert);
+			pstmt.setString(1, produto.getNome());
+			pstmt.setDouble(2, produto.getPreco());
+			pstmt.executeUpdate();
+			System.out.println("Aham");
+		} catch (SQLException e ) {
+			e.printStackTrace();
+		}		
+	}
+	
+	
+	public void alterarProduto(Connection con, Produto produto) {
+		
+		String sqlUpdate = "UPDATE produto SET preco = ? WHERE id_produto = ?";
+
+		try {
+			PreparedStatement stmt = con.prepareStatement();
+			stmt.executeUpdate(sqlUpdate);
+			
+		}catch (SQLException e ) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void excluirProduto(Connection con, Produto produto) {
+		
+		String sqlDelete = "DELETE FROM produto WHERE id_produto = 2";
+		try {
+			Statement stmt = con.createStatement();
+			stmt.executeUpdate(sqlDelete);
+		} catch (SQLException e ) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void selecionarProduto(Connection con, Produto produto) {
+		
+		String sql = "SELECT id_produto, nome, preco FROM produto";
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+		}catch (SQLException e ) {
+			e.printStackTrace();
+		}
+	}
+}
+
+

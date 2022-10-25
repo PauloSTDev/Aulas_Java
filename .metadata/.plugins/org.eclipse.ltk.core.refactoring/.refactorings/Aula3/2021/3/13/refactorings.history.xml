@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 7 elements to &apos;webapp&apos;&#x0D;&#x0A;- Original project: &apos;Aula3&apos;&#x0D;&#x0A;- Destination element: &apos;webapp&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     loading.html&#x0D;&#x0A;     login-estilos.css&#x0D;&#x0A;     imagem01.jpg&#x0D;&#x0A;     loading.css&#x0D;&#x0A;     produtos.html&#x0D;&#x0A;     produtos.css&#x0D;&#x0A;     login.html" description="Copy files" element1="src/main/webapp/loading.html" element2="src/main/webapp/login-estilos.css" element3="src/main/webapp/imagem01.jpg" element4="src/main/webapp/loading.css" element5="src/main/webapp/produtos.html" element6="src/main/webapp/produtos.css" element7="src/main/webapp/login.html" files="7" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1616712483099" target="/Aula4/src/main/webapp" units="0" version="1.0"/>
+</session>

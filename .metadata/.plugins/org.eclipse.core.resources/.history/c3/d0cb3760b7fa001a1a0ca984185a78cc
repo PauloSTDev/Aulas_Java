@@ -1,0 +1,47 @@
+package br.edu.imed;
+
+import javax.naming.LimitExceededException;
+
+public class ContaBancaria {
+	
+	public static void main(String[] args) {
+		ContaTitular ct =new ContaTitular ();
+		ContaPoupanca cp = new ContaPoupanca();
+		ct.agencia = "123";
+		ct.banco="ACME";
+		ct.titular = "Felipe";
+		
+		//ct.depositar(1200d);
+		//ct.sacar(100d);
+		
+		ContaTitular ct2 = new ContaTitular();
+		
+		ct2.agencia="321";
+		ct2.banco="ACME";
+		ct2.saldo =0d;
+		ct.titular= "Ana";
+		//ct.transferir(200d, ct2);
+		//System.out.println("Saldo da CT 1: "+ct.saldo+" e o saldo da CT 2: "+ct2.saldo);
+		//ct.gerarExtrato();
+		//ct.LimiteCheque = 1200d;
+		//System.out.println("Seu limite de cheque especial é: "+ct.LimiteCheque);
+		
+		//ct.rendimentoContaCorrente(ct.saldo);
+		cp.agencia = "999";
+		cp.chequeEspecial = 2000d;
+		//System.out.println("Sei limite de cheque especial: "+cp.chequeEspecial);
+		cp.banco="Santander";
+		cp.titular = "Leticia";
+		cp.dataAbertura = "07.09.2020";
+		cp.dataFechamento="08.09.2020";
+		//cp.depositoPoupanca(2000d);
+		//cp.calcularRendimentos(cp.saldoPoupanca);
+		//cp.transferenciaPoupanca(1000d);
+		DadosChequeEspecial ce = new DadosChequeEspecial();
+		ce.agencia = "999";
+		ce.banco="Bantrul";
+		ce.titular = "Ricardo Oliveira Vieira";
+		ce.saldo = 1000d;
+		ce.MostrarSaldo();
+	}
+}

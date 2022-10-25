@@ -1,0 +1,46 @@
+package FoodMachine;
+
+
+public enum ProdutoComida {
+	DORITOS( " Doritos " , 10, "1B"),
+	BARRADECEREAL ( " Barra de Cereal " , 2, "2B"),
+	PRINGLES ( " Pringles " , 12, "3B"),
+	JUJUBA(" Jujuba", 3, "4B");
+	
+	private  String nome;
+	private  int preco;
+	private  String codigo;
+	
+	private ProdutoComida( String  nome , int  preco , String codigo) {
+		this . nome = nome;
+		this . preco = preco;
+		this . codigo = codigo;
+	}
+
+	public  String  getNome () {
+		
+		return nome;
+	}
+
+	public  int  getPreco () {
+		
+		return preco;
+	}
+	public String getCodigo() {
+		
+		return codigo;
+	}
+	public static void MostrarBebidas() {
+		Produtos agua = Produtos.AGUA;
+		Produtos coca = Produtos.COCA;
+		Produtos pepsi = Produtos.PEPSI;
+		Produtos sprite = Produtos.SPRITE;
+		
+		System.out.println("Bebida   "+" Valor  "+" Codigo de resgate" );
+		System.out.println(agua.toString() + "      "+ agua.getPreco()+ "       "+ agua.getCodigo());
+		System.out.println(coca.toString() + "      "+ coca.getPreco()+ "       "+ coca.getCodigo());
+		System.out.println(pepsi.toString() + "     "+ pepsi.getPreco()+ "       "+ pepsi.getCodigo());
+		System.out.println(sprite.toString() + "    "+ sprite.getPreco()+ "       "+ sprite.getCodigo());
+	}
+}
+

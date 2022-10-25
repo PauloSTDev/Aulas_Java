@@ -1,0 +1,17 @@
+package FoodMachine;
+
+public class MostrarLanches {
+	
+	public static void Bebidas() {
+		Produtos agua = Produtos.AGUA;
+		Produtos coca = Produtos.COCA;
+		Produtos pepsi = Produtos.PEPSI;
+		Produtos sprite = Produtos.SPRITE;
+		
+		System.out.println("Bebida   "+" Valor  "+" Codigo de resgate" );
+		System.out.println(agua.toString() + "      "+ agua.getPreco()+ "       "+ agua.getCodigo());
+		System.out.println(coca.toString() + "      "+ coca.getPreco()+ "       "+ coca.getCodigo());
+		System.out.println(pepsi.toString() + "     "+ pepsi.getPreco()+ "       "+ pepsi.getCodigo());
+		System.out.println(sprite.toString() + "    "+ sprite.getPreco()+ "       "+ sprite.getCodigo());
+	}
+}

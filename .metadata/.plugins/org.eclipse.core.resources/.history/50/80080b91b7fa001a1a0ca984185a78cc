@@ -1,0 +1,11 @@
+package br.edu.imed;
+
+public class ChequeEspecial {
+	public void MostrarSaldo() {
+		System.out.println("Saldo: "+saldo);
+	}
+	public void CalcularChequeEspecial(Double saldo) {
+		saldo = saldo + saldo/2;
+		System.out.println("Cheque Especial: "+saldo);
+	}
+}
